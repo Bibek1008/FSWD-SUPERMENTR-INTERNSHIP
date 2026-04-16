@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect the Stack</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+      }
+      .task {
+        margin-bottom: 0.75rem;
+      }
+      .completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Connect the Stack</h1>
+    <p>This page consumes backend APIs from the same Express server.</p>
+    <button id="loadTasks">Load Tasks</button>
+    <div id="tasks"></div>
+    <script>
+      const loadTasks = async () => {
+        const response = await fetch("/api/tasks");
+        const tasks = await response.json();
+        const container = document.getElementById("tasks");
+        container.innerHTML = tasks
+          .map(
+            (task) =>
+              `<div class="task ${task.completed ? "completed" : ""}"><strong>${task.title}</strong> (${task.completed ? "Done" : "Pending"})</div>`,
+          )
+          .join("");
+      };
+      document.getElementById("loadTasks").addEventListener("click", loadTasks);
+    </script>
+  </body>
+</html>

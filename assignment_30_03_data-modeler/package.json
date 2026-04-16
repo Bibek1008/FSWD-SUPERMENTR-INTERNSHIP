@@ -1,0 +1,9 @@
+{
+  "name": "data-modeler",
+  "version": "1.0.0",
+  "description": "MongoDB schema design for a blogging platform",
+  "main": "models/blogModels.js",
+  "dependencies": {
+    "mongoose": "^7.5.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "connect-the-stack",
+  "version": "1.0.0",
+  "description": "Connect React frontend to backend APIs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "mvc-refactor",
+  "version": "1.0.0",
+  "description": "Task API refactored into MVC structure",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
