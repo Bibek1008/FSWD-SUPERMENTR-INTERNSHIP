@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Form</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .message { margin-top: 10px; font-weight: bold; }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+
+<h2>Signup Form</h2>
+<form id="signupForm">
+  Name: <input type="text" id="name"><br><br>
+  Email: <input type="email" id="email"><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="msg" class="message"></p>
+
+<script>
+const form = document.getElementById("signupForm");
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form from submitting
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+
+  if(name === "" || email === "") {
+    msg.textContent = "Please fill in all fields!";
+    msg.className = "message error";
+  } else {
+    msg.textContent = "Form submitted successfully!";
+    msg.className = "message success";
+  }
+});
+</script>
+
+</body>
+</html>

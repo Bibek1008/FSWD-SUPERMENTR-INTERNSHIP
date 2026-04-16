@@ -1,0 +1,21 @@
+I broke down a popular website (Youtube) into components and these are the components.
+
+App (Root Component)
+Main container for the entire application
+Header
+Logo
+Search Bar
+User Icons (profile, notifications, upload)
+Sidebar
+Home
+Trending
+Subscriptions
+Library
+Main Content Area
+Video Grid
+Video Card (Reusable Component)
+Thumbnail
+Video Title
+Channel Name
+Views & Upload Time
+Footer (optional/minimal in YouTube UI)
